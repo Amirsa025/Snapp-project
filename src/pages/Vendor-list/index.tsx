@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../../store/store";
 
 import {BeatLoader} from "react-spinners";
-import {GetContactsList} from "../../store/reducers/vendorReducer";
+import {GetVendorsList} from "../../store/reducers/vendorReducer";
 // @ts-ignore
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -23,7 +23,7 @@ const Vendors = () => {
 
 
     useEffect(() => {
-        dispatch(GetContactsList(1))
+        dispatch(GetVendorsList(1))
         setPage(prevState => prevState + 1)
     },[dispatch])
 
@@ -34,7 +34,7 @@ const Vendors = () => {
         setTimeout(() => {
             if(hasMore){
 
-                dispatch(GetContactsList(page))
+                dispatch(GetVendorsList(page))
             }
         },1000)
     }
