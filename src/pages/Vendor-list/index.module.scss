@@ -1,0 +1,17 @@
+@import "src/styles/mixins";
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color:#f8f9fb;
+  min-height: 100vh;
+}
+.container__children{
+    @include flexCol(flex);
+    padding:7rem 0;
+    gap:50px;
+}
+.Loading{
+    @include Center(flex);
+    margin-top: 1.5rem;
+}

@@ -1,4 +1,31 @@
-.header {
-  background-color: #20232a;
-  text-align: center;
+@import "src/styles/mixins";
+@import "src/styles/variable";
+
+
+.container{
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style: none;
+  z-index: 99999;
 }
+.header {
+
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  color: #ffffff;
+padding-right: 0.5rem;
+}
+.logo {
+
+}
+.logo a {
+  text-decoration: none;
+  color :$defaultLinkColor
+}
+

@@ -1,0 +1,30 @@
+@import 'variable';
+@mixin pad($n) {
+  padding: $n;
+}
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin Mar($n) {
+  margin-top: $n;
+}
+@mixin MediaQuery($screen) {
+  @media only screen and (min-width : $screen) {
+    @content;
+  }
+}
+@mixin Center($display){
+    display: $display;
+    align-items: center;
+  justify-content: center;
+}
+@mixin Between($display,$spacing){
+  display: $display;
+  align-items: center;
+  justify-content:$spacing;
+}
+@mixin flexCol($display){
+  display: $display;
+  flex-direction: column
+}

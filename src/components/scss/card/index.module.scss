@@ -1,12 +1,146 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variable';
+
 .card {
-  padding: 1rem 1.5rem;
+  padding:10px 0;
+  direction: rtl;
+  border-radius: 6px;
+  @include Mar(2rem);
+    .cover__header{
+        position: relative;
+
+    }
+        img {
+          border-radius: 10px;
+          width:$responsiveCard;
+          height: 14.063rem;
+            @include MediaQuery($sm) {
+            width:$DeskTopCard;
+            }
+        }
 }
 
 .header {
-  padding: 1.5rem 0;
+  position: absolute;
+  bottom: 120px;
+}
+//@media screen and (min
+@import './src/styles/mixins';
+@import './src/styles/variable';
+
+.container__Cart_item {
+  @include pad(1rem);
+  background-color: #ffffff;
   margin-bottom: 1rem;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.85);
   font-weight: 500;
-  border-bottom: 1px solid #f0f0f0;
+  position: absolute;
+  width: $responsiveCard;
+  min-height: 8rem;
+  padding: 10px 0;
+  border: 1px solid #e5e5e5;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  box-shadow: -9px 7px 14px -1px rgba(217, 217, 217, 1);
+  -webkit-box-shadow: -9px 7px 14px -1px rgba(217, 217, 217, 1);
+  -moz-box-shadow: -9px 7px 14px -1px rgba(217, 217, 217, 1);
+  @include MediaQuery($sm) {
+    width:$DeskTopCard;
+  }
+  .logo_Cart_item {
+    position: absolute;
+    top: -52px;
+    width: 100%;
+
+    .logo_Cart_item__photo {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 0.4rem;
+      background: $bgCard;
+      border-radius: $rounded;
+      box-shadow: $shadowSm;
+      -webkit-box-shadow: $shadowSm;
+      -moz-box-shadow: $shadowSm;
+      @include Center(flex);
+
+      .logo_Cart_item__photo__frame {
+        width: 3.563rem;
+        padding: 0.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.563rem;
+
+      }
+
+      img {
+        width: $full;
+        height: $full;
+        border: $BorderSm;
+
+      }
+    }
+
+    .title_Cart__item {
+      padding: 0.5rem 0.8rem;
+      @include Between(flex, space-between);
+      .title_Cart__item__Section{
+        span{
+          font-size: 14px;
+          color: $title__Cart;
+          font-weight: $text_Medium;
+        }
+      }
+
+    }
+    .title_Cart__item__Content{
+      display: flex;
+      gap: 0.4rem;
+      .title_Cart__item__Rate{
+        display: flex;
+        @include Center(flex);
+        width:40px;
+        gap: 0.3rem;
+        border-radius:$rounded ;
+        background: $success_light;;
+        .title_Cart__item__icon{
+          width:0.8rem;
+          height:0.8rem;
+          color: $success;
+        }
+        span{
+          font-size: 12px;
+          font-family: 'IRANSans',serif;
+          color: $success;
+          padding-top:1px;
+          font-weight:500;
+        }
+
+      }
+    }
+    .title_Cart__figure{
+      span{
+        font-size: 13px;
+        color: #ababab;
+        font-weight: 300;
+      }
+    }
+  }
+  .sectionDescription__Cart__item{
+    @include flexCol(flex);
+    padding: 0.1rem 0.8rem;
+  }
+  .sectionDescription__Content{
+    font-size: 12px;
+    color: $title__Cart;
+    font-weight: $text_Medium;
+  }
+  .sectionDescription__Details{
+    font-size: 12px;
+    color: $title__Cart;
+    .sectionDescription__Details_price{
+      color:#ababab ;
+    }
+  }
 }

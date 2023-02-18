@@ -1,0 +1,14 @@
+
+@import 'src/styles/variable';
+
+.sectionDescription__Details{
+
+  font-size: 12px;
+  color: $title__Cart;
+  .sectionDescription__Details_price{
+    padding-right: 10px;
+  }
+    .sectionDescription__Details_delivery{
+    color:#ababab ;
+  }
+}

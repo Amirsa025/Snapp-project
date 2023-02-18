@@ -1,8 +1,28 @@
+
+@import "mixins";
 html,
 body {
   margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  @include pad(0);
+  font-family: 'IRANSans',sans-serif;
 }
+@mixin heading-font {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+h1 {
+  @include heading-font;
+}
+@font-face {
+  font-family: 'IRANSans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../Assets/fonts/eot/IRANSansWeb.eot');
+  src: url('../Assets/fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+    /* IE6-8 */ url('../Assets/fonts/woff2/IRANSansWeb.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/ url('../Assets/fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../Assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+
+
