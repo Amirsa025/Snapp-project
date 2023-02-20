@@ -61,7 +61,7 @@ const Vendors = () => {
                             >
                                 <Card data={CarDItem} ></Card>
                             </InfiniteScroll>
-                        </>):(<h3>No Records</h3>)
+                        </>):(<h3>محصولی یافت نشد</h3>)
                     }
                 </div>
             </div>

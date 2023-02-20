@@ -30,7 +30,7 @@ export default function VendorListReducer(state = initialState, action){
 
 
 export function GetVendorsList(page){
-    return async function getContactsForCardsThunk(dispatch){
+    return async function getVendorForCardsThunk(dispatch){
         const params = { page:page,pageSize:10}
         const response = await callApi().get<Array<IVendor>>(`/vendors-list?page_size=10&lat=35.754&long=51.328`,{params:params});
         if(response){

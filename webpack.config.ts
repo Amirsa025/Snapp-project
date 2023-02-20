@@ -1,11 +1,11 @@
 
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 import { Configuration } from "webpack";
 
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 const path = require('path');
 const webpackConfig = (): Configuration => ({
-    entry: "./src/index.tsx",
+    entry: ["./src/index.tsx", 'react-hot-loader/patch'],
     ...(process.env.production || !process.env.development
         ? {}
         : { devtool: "eval-source-map" }),
@@ -30,7 +30,11 @@ const webpackConfig = (): Configuration => ({
             },
             {
                 test: /\.s?css$/,
-                use: ["style-loader", "css-loader"],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
             },
         ],
     },
